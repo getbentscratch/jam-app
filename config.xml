@@ -2,10 +2,10 @@
 <widget id="com.noble.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Noble</name>
     <description>
-        A blank PhoneGap app.
+        Noble App
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="lucas.bent@msad60.org" href="msad60.org">
+        Lucas Bent
     </author>
     <content src="index.html" />
     <access origin="*" />
