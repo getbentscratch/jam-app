@@ -3,58 +3,246 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>Noble</title>
+        <title>Jam</title>
     </head>
     <body>
 	<style>
-	body {
-  background-color: #F7F7F7;
-  margin: -1%;
-  max-width: 100%;
+body {
+  background: #303030;
+  overflow: scroll;
   overflow-x: hidden;
-  text-align: center;
+	}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
-.rule {
-  width: 100%;
-  height: 0.5%;
-  background-color: maroon;
-}
-.button {
-  font-family: roboto, arial;
-  font-size: auto;
-  transform: translateX(1.15%);
+#output {
+  box-shadow: 0px 3px 12px #16161d;
+  width: 95%;
   color: white;
-  padding: 20px;
-  background-color: maroon;
-  border-radius: 5px;
-  user-select: none;
-  display: inline-block;
-  width: 80%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  word-wrap: break-word;
+  max-width: 100%;
+  padding: 3%;
+  font-family: arial;
+  background: #2B2B2B;
+  transition: .1s all;
+  position: absolute;
+  margin-left: -2%;
 }
-.news {
-  font-family: roboto, arial;
-  color: black;
-  user-select: none;
-  background-color: white;
-  padding: 5px;
-  font-size: 200%
+#output:hover {
+	background: #252525;
+}
+#pinnumber {
+outline: none;
+transition: all .3s;
+border: none;
+background: #303030;
+box-shadow: inset 0px 3px 3px #16161d;
+width: 100%;
+height: 0%;
+color: white;
+padding: 3%;
+transform: translateX(-0.25%);
+}
+#pinnumber:hover {
+box-shadow: inset 0px 3px 9px #16161d;
+}
+#pinnumber:focus {
+box-shadow: inset 0px 3px 12px #16161d;
+}
+#put {
+outline: none;
+transition: all .3s;
+border: none;
+background: #303030;
+box-shadow: inset 0px 3px 3px #16161d;
+width: 97%;
+height: 0%;
+padding: 3%;
+padding-right: 0%;
+transform: translateX(0.25%);
+color: white;
+position: relative;
+z-index: 0;
+float: left;
+}
+#put:hover {
+box-shadow: inset 0px 3px 9px #16161d;
+}
+#put:focus {
+box-shadow: inset 0px 3px 12px #16161d;
+}
+#encbutton {
+outline: none;
+border: none;
+background-color: #646464;
+color: white;
+transition: .2s all;
+z-index: 10;
+padding: 9%;
+position: relative;
+}
+#encbutton:hover {
+background-color: gray;
+}
+#pinlabel {
+outline: none;
+border: none;
+background-color: #646464;
+padding: 15%;
+color: white;
+}
+#put2 {
+outline: none;
+transition: all .3s;
+border: none;
+background: #303030;
+box-shadow: inset 0px 3px 3px #16161d;
+width: 97%;
+height: 0%;
+padding: 3%;
+padding-right: 0%;
+transform: translateX(0.25%);
+color: white;
+position: relative;
+z-index: 0;
+float: left;
+}
+#put2:hover {
+box-shadow: inset 0px 3px 9px #16161d;
+}
+#put2:focus {
+box-shadow: inset 0px 3px 12px #16161d;
+}
+#decbutton {
+outline: none;
+border: none;
+background-color: #646464;
+color: white;
+transition: .2s all;
+z-index: 10;
+padding: 9%;
+position: relative;
+}
+#decbutton:hover {
+background-color: gray;
+}
+.bar {
+	background: #212121;
+	width: 105%;
+	font-family: arial;
+	font-size: 200%;
+	color: white;
+	padding: 3%;
+	padding-left: 0%;
+	margin: -2%;
+	margin-top: -2%;
+	box-shadow: 0px 3px 12px #16161d;
+	position: fixed;
+	display: relative;
+	z-index: 20;
+	-webkit-user-select: none;
+	-webkit-app-region: drag;
+}
+html, body {
+    height: 100%;
+}
+.main {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+.wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+.card {
+	background: #424242;
+	width: fit-content;
+	padding: 10%;
+	box-shadow: 0px 3px 12px #16161d;
+}
+.left {
+	float: left;
+	height: 100%;
+	width: fit-content;
+}
+.tools {
+all: unset;
+height: 50%;
+width: 20%;
+font-family: arial;
+font-size: 50%;
+-webkit-user-select: none;
+z-index: 50;
+position: fixed;
+-webkit-app-region: no-drag;
+font-weight: bold;
+margin-left: 23.7%;
+margin-top: -2.6%;
+}
+.min {
+color: white;
+background: #212121;
+padding: 10%;
+padding-top: 5%;
+padding-bottom: 5%;
+float: left;
+}
+.min:hover {
+background: #424242;
+}
+.close {
+color: red;
+background: #212121;
+padding: 10%;
+padding-top: 5%;
+padding-bottom: 5%;
+float: left;
+}
+.close:hover {
+background: #424242;
 }
 </style>
+	    <center>
+<div class = "bar">JAM v1.0</div>
+</center>
+<div class = "main"><div class = "wrapper">
 <center>
+<div class = "card">
+<div class = "left"><input type="submit" value="PIN:" id="pinlabel"></div>
+<div class = "left"><input type="text" id="pinnumber"  autocomplete="off"></div>
+<form action="javascript:encode();" id="command">
+<br>
+<br>
+<br>
+  <div class = "left"><input type="text" id="put" autocomplete="off"></div>
+  <div class = "left"><input type="submit" value="Encode" id="encbutton"></div>
   <br>
-  <img src="img/logo.png" width= 90%>
   <br>
   <br>
-  <div class="rule"></div>
+</form>
+<form action="javascript:decode();" id="command2">
+  <div class = "left"><input type="text" id="put2" autocomplete="off"></div>
+  <div class = "left"><input type="submit" value="Decode" id="decbutton"></div>
   <br>
-  <div class="button"><b>School Map</b></div>
   <br>
   <br>
-    <div class="button"><b>Chat</b></div>
-  <br>
-  <img src = "https://img.112.international/original/2018/02/28/271368.jpg" width = 100% height= 20%;>
-  <br>
-  <div class="news">Snow Day!</div>
+</form>
+</div>
+<br>
+<br>
+<div id="output" onclick="CopyToClipboard('output')"></div>
+</center>
+</body>
+</div>
+</div>
+	        <script type="text/javascript" src="jam.js">
+		
+		</script>
         <script type="text/javascript" src="cordova.js">
 		
 		</script>
