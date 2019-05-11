@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.noble.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <icon src="res/noble-icon.png" />
-    <name>Noble</name>
+<widget id="com.jam.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <icon src="res/icon.png" />
+    <name>JAM Encoder/Decoder</name>
     <description>
-        Noble App
+        It needs no explanation!
     </description>
-    <author email="lucas.bent@msad60.org" href="msad60.org">
+    <author email="poopoo@peepee.com" href="peepee.com">
         Lucas Bent
     </author>
     <content src="index.html" />
