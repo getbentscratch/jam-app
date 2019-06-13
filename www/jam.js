@@ -12,6 +12,10 @@ function encode() {
 			return;
 		}
 	}
+	if (isNaN(document.getElementById("pinnumber").value)) {
+		alert("Your PIN is invalid - make sure it's a number (decimals count)!");
+		return;
+	}
 	var newchars = "";
 	while (i < inp) {
 		chc = inlet.substring(i, i + 1);
