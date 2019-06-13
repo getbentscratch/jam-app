@@ -3,11 +3,9 @@
     <icon src="res/icon.png" />
     <name>Jam</name>
     <description>
-        It needs no explanation!
+        Encoding/Decoding App!
     </description>
-    <author email="poopoo@peepee.com" href="peepee.com">
-        Lucas Bent
-    </author>
+	<preference name="orientation" value="portrait" />
     <content src="index.html" />
     <access origin="*" />
 </widget>
