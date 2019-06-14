@@ -13,7 +13,11 @@ function encode() {
 		}
 	}
 	if (isNaN(document.getElementById("pinnumber").value)) {
-		alert("Your PIN is invalid - make sure it's a number (decimals count)!");
+		alert("Your PIN should be a positive number greater than 100 (you can use decimals too!)");
+		return;
+	}
+	if (document.getElementById("pinnumber").value <= 100) {
+		alert("Your PIN should be a positive number greater than 100 (you can use decimals too!)");
 		return;
 	}
 	var newchars = "";
@@ -77,6 +81,11 @@ function decode() {
 				i2++;
 			}
 			out = chars2[deh];
+			if (out === undefined) {
+				alert("There was an error trying to decode your message - Make sure your PIN and the message are typed correctly!");
+				document.getElementById("output").innerHTML = "";
+				return;
+			}
 			document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + out;
 		}
 		i2++;
