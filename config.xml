@@ -5,7 +5,7 @@
     <description>
         Encoding/Decoding App!
     </description>
-	<activity android:windowSoftInputMode="adjustPan"> </activity>
+	<preference name="android-windowSoftInputMode" value="stateVisible|adjustPan" />
 	<preference name="orientation" value="portrait" />
     <content src="index.html" />
     <access origin="*" />
