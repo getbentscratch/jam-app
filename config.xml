@@ -5,7 +5,7 @@
     <description>
         Encoding/Decoding App!
     </description>
-	<preference name="android-windowSoftInputMode" value="stateVisible|adjustPan" />
+	<preference name="android-windowSoftInputMode" value="stateHidden|adjustPan" />
 	<preference name="orientation" value="portrait" />
     <content src="index.html" />
     <access origin="*" />
