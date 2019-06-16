@@ -8,7 +8,6 @@
 	<preference name="android-windowSoftInputMode" value="stateHidden|adjustPan" />
 	<preference name="android-minSdkVersion" value="26" />
 	<preference name="orientation" value="portrait" />
-	<application android:debuggable="false" />
     <content src="index.html" />
     <access origin="*" />
 </widget>
