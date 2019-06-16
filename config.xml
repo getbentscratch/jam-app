@@ -6,7 +6,8 @@
         Encoding/Decoding App!
     </description>
 	<preference name="android-windowSoftInputMode" value="stateHidden|adjustPan" />
-	<preference name="android-minSdkVersion" value="26" />
+	<preference name="android-minSdkVersion" value="14" />
+	<preference name="android-targetSdkVersion" value="26" />
 	<preference name="orientation" value="portrait" />
 	<preference name="android-manifest/@android:debuggable" value="false" />
     <content src="index.html" />
